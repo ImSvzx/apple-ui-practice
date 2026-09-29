@@ -1,0 +1,841 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: white;
+}
+/* ================================= */
+
+/* Navbar */
+
+/* ================================= */
+
+.navbar {
+  height: 44px;
+  width: 100vw;
+  background: rgb(240, 240, 240);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 0.9; */
+  position: fixed;
+  z-index: 100;
+  padding: 0 20px;
+}
+
+.navspace {
+  height: 44px;
+  width: 100%;
+}
+.nav-shrink {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ========================= */
+
+/* APPLE LOGO */
+
+/* ========================== */
+
+.logo {
+  margin-right: 35px;
+}
+
+.logo a {
+  color: #222;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* ========================= */
+
+/* NAV MENU */
+
+/* ========================= */
+
+.nav-links {
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: nowrap;
+  text-wrap: wrap;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item > a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+}
+
+.nav-menu {
+  justify-content: center;
+  height: 44px;
+  display: none;
+  align-items: center;
+}
+
+/* ============================= */
+
+/* MEGA MENU */
+
+/* ============================== */
+
+.mega-menu {
+  position: absolute;
+  top: 44px;
+  left: 0;
+
+  width: 100%;
+
+  background: white;
+
+  padding: 40px 18% 50px;
+
+  display: none;
+
+  gap: 70px;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+
+  position: absolute;
+}
+
+/* SHOW MENU WHEN HOVER */
+
+.nav-item:hover .mega-menu {
+  display: flex;
+
+  animation: dropdown 0.3s ease-in;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translateY(-100px) 0.2s;
+    opacity: 0;
+  }
+}
+
+/* COLUMNS */
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  min-width: 180px;
+}
+
+.menu-column.big {
+  min-width: 230px;
+}
+
+/* COLUMN TITLE */
+
+.menu-column span {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* MENU LINKS */
+
+.menu-column a {
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.menu-column.big a {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/*  SEARCH BAR */
+
+.menu-search {
+  border: none;
+  font-size: 28px;
+}
+
+.menu-column:last-child p > a {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* =========================== */
+
+/* Notification */
+
+/* =========================== */
+
+.sub-head {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  position: relative;
+}
+.sub-head p {
+  text-align: center;
+}
+
+/* ========================= */
+
+/* Carousel */
+
+/* ========================= */
+.head-tile {
+  width: 100%;
+  position: relative;
+}
+.head-tile video {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.headtile-cont {
+  width: 100%;
+  color: white;
+
+  position: absolute;
+  top: 50px;
+
+  text-align: center;
+}
+
+.tile-content h1 {
+  font-size: 50px;
+}
+.tile-content p {
+  font-size: 25px;
+  margin: 10px;
+}
+.tile-button button {
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+.tile-button button:last-child {
+  color: blue;
+  background-color: transparent;
+  border: 1px solid blue;
+}
+.tile-button button:first-child {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+/* ======================= */
+
+/* Second Tile */
+
+/* ======================== */
+
+.tile {
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+  /* overflow: hidden; */
+  position: relative;
+  margin-top: 20px;
+}
+.tile img {
+  max-height: 580px;
+}
+.img {
+  display: grid;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.tile-content {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  text-align: center;
+}
+.tile-one span {
+  color: grey;
+}
+
+/* ======================= */
+
+/* Grid Tile */
+
+/* ======================= */
+
+.grid-tile {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid {
+  height: 580px;
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.grid img {
+  height: 100%;
+  width: auto;
+}
+
+.grid-cont {
+  width: 100%;
+  color: rgb(0, 0, 0);
+
+  position: absolute;
+  top: 20px;
+
+  text-align: center;
+}
+
+.grid-cont p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.grid-cont h1 {
+  font-size: 40px;
+}
+
+.grid-btn button {
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 17px;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+.grid-top {
+  color: white;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+}
+
+.grid-top h1 {
+  font-size: 40px;
+}
+
+.grid-btm {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+}
+
+.grid-btm h1 {
+  font-size: 40px;
+}
+
+.grid-btm p {
+  margin: 10px;
+}
+
+.dark {
+  color: black;
+}
+
+/* ========================== */
+
+/* footer notes */
+
+/* ========================== */
+
+.footer-notes {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.footer-notes p {
+  font-size: 9px;
+  line-height: 1.5;
+  color: #6e6e73;
+  margin-bottom: 12px;
+}
+
+.footer-notes a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.footer-notes a:hover {
+  text-decoration: underline;
+}
+
+li {
+  font-size: 12px;
+  color: grey;
+  line-height: 20px;
+  list-style: none;
+}
+
+/* ======================== */
+
+/* footer */
+
+/* ========================= */
+
+.apple-footer {
+  margin: 0 100px;
+  /* background-color: rgb(236, 236, 236); */
+}
+
+.apple-footer a {
+  font-size: 12px;
+  text-decoration: none;
+  color: grey;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.footer-column h3 {
+  margin-top: 30px;
+  font-size: 13px;
+  color: grey;
+}
+
+.footer-store,
+.footer-bottom {
+  font-size: 12px;
+}
+.footer-store {
+  margin: 30px 100px;
+}
+.footer-store a {
+  color: blue;
+  text-decoration: underline;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 100px;
+}
+
+/* ========================= */
+
+/* Video Carousel */
+
+/* ========================= */
+
+.video-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-carousel {
+  height: 600px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  animation: scroll 20s infinite;
+}
+.caro img {
+  height: 580px;
+  position: relative;
+}
+.caro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.btm-carousel {
+  height: 200px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  animation: scroll 20s infinite;
+}
+.card {
+  height: 180px;
+  width: 520px;
+  background-color: black;
+  position: relative;
+}
+.card img {
+  height: 100%;
+  width: auto;
+  position: relative;
+}
+
+.caro-cont {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+}
+
+.caro-cont button {
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: #e9e9e9;
+}
+
+.card-cont {
+  font-size: 18px;
+  color: white;
+  position: relative;
+  bottom: 50px;
+  left: 220px;
+}
+
+.card-cont button {
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: #e9e9e9;
+}
+
+.caro-cont button:hover {
+  background-color: white;
+}
+
+.card-cont button:hover {
+  background-color: white;
+}
+
+/* ============================ */
+
+/* Media query */
+
+/* ============================ */
+
+@media (max-width: 575.99px) {
+  /* navbar */
+
+  .nav-shrink {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-item {
+    margin-right: 10px;
+  }
+  .nav-menu {
+    display: flex;
+  }
+  .logo {
+    margin: 0;
+  }
+  .nav-menu:hover .mega-menu {
+    display: flex;
+  }
+
+  /* carousel */
+
+  .head-tile {
+    height: 700px;
+    background-color: black;
+  }
+  .head-tile video {
+    rotate: 90deg;
+    height: 100%;
+  }
+  .headtile-cont {
+    top: auto;
+    bottom: 50px;
+  }
+
+  /* Grid */
+
+  .grid-tile {
+    padding: 0px;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Video Carousel */
+
+  .caro {
+    height: 500px;
+    width: auto;
+  }
+
+  .caro-cont {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+
+  /* footer */
+
+  .apple-footer {
+    margin: auto 5px;
+  }
+  .footer-container {
+    flex-direction: column;
+    margin: auto 50px;
+  }
+  .footer-store {
+    margin: 30px 50px;
+  }
+  .footer-bottom {
+    margin: 30px 50px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+  /* navbar */
+
+  .navbar a {
+    font-size: 10px;
+  }
+  .nav-shrink {
+    gap: 15px;
+  }
+
+  /* Carousel */
+
+  .head-tile {
+    height: 800px;
+    background-color: black;
+  }
+  .head-tile video {
+    rotate: 90deg;
+    height: 100%;
+  }
+  .headtile-cont {
+    top: auto;
+    bottom: 50px;
+  }
+
+  /* grid */
+
+  .grid-tile {
+    padding: 0px;
+    margin: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* video carousel */
+  .caro {
+    height: 500px;
+    width: auto;
+  }
+
+  .caro-cont {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+
+  /* footer */
+
+  .apple-footer {
+    margin: auto 5px;
+  }
+  .footer-container {
+    flex-direction: column;
+    margin: auto 50px;
+  }
+  .footer-store {
+    margin: 30px 50px;
+  }
+  .footer-bottom {
+    margin: 30px 50px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.99px) {
+  /* navbar */
+
+  .navbar a {
+    font-size: 10px;
+  }
+  .nav-shrink {
+    gap: 15px;
+  }
+
+  /* carousel */
+
+  .head-tile {
+    height: 1000px;
+    background-color: black;
+  }
+  .head-tile video {
+    rotate: 90deg;
+    height: 100%;
+  }
+  .headtile-cont {
+    top: auto;
+    bottom: 50px;
+  }
+
+  /* grid */
+
+  .grid {
+    max-height: 300px;
+  }
+  .grid p {
+    font-size: 15px;
+    margin: 7px;
+  }
+  .grid h1 {
+    font-size: 20px;
+  }
+  .grid button {
+    font-size: 15px;
+  }
+
+  /* video carousel */
+
+  .caro {
+    height: 500px;
+    width: auto;
+  }
+  .caro-cont {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+
+  /* footer */
+
+  .apple-footer {
+    margin: auto 5px;
+  }
+  .footer-container {
+    flex-direction: column;
+    margin: auto 50px;
+  }
+  .footer-store {
+    margin: 30px 50px;
+  }
+  .footer-bottom {
+    margin: 30px 50px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* navbar */
+
+  .navbar a {
+    font-size: 13px;
+  }
+  .nav-shrink {
+    gap: 15px;
+  }
+
+  /* carousel */
+
+  .head-tile {
+    height: 1200px;
+    background-color: black;
+  }
+  .head-tile video {
+    rotate: 90deg;
+    height: 100%;
+  }
+  .headtile-cont {
+    top: auto;
+    bottom: 50px;
+  }
+
+  /* grid */
+
+  .grid {
+    max-height: 300px;
+  }
+  .grid- p,
+  span {
+    font-size: 13px;
+    margin: 7px;
+  }
+  .grid h1 {
+    font-size: 20px;
+  }
+  .grid button {
+    font-size: 13px;
+  }
+
+  /* video caarousel */
+
+  .caro {
+    height: 500px;
+    width: auto;
+  }
+
+  .caro-cont {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+
+  /* footer */
+
+  .apple-footer {
+    margin: auto 5px;
+  }
+  .footer-container {
+    flex-direction: column;
+    margin: auto 50px;
+  }
+  .footer-store {
+    margin: 30px 50px;
+  }
+  .footer-bottom {
+    margin: 30px 50px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
