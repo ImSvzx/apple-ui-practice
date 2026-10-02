@@ -6,8 +6,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: white;
+  background: rgb(240, 240, 240);
 }
 /* ================================= */
 
@@ -48,6 +49,9 @@ body {
 
 .logo {
   margin-right: 35px;
+  
+  display: flex;
+  justify-content: center ;
 }
 
 .logo a {
@@ -246,6 +250,13 @@ body {
   border: none;
 }
 
+.head-tile 
+{
+  width: 100%;
+  overflow-x: hidden;
+  /* height:  auto; */
+}
+
 /* ======================= */
 
 /* Second Tile */
@@ -253,14 +264,17 @@ body {
 /* ======================== */
 
 .tile {
+  height: auto;
   width: 100%;
   background-color: rgb(236, 236, 236);
-  /* overflow: hidden; */
+  overflow-x: hidden;
   position: relative;
   margin-top: 20px;
 }
 .tile img {
-  max-height: 580px;
+  min-height: 580px;
+  width: auto;
+  
 }
 .img {
   display: grid;
@@ -304,7 +318,7 @@ body {
 
 .grid img {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .grid-cont {
@@ -565,7 +579,7 @@ li {
     justify-content: space-between;
   }
   .nav-item {
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
   .nav-menu {
     display: flex;
@@ -640,6 +654,9 @@ li {
   }
   .nav-shrink {
     gap: 15px;
+  }
+  .navbar{
+    padding: 0;
   }
 
   /* Carousel */
